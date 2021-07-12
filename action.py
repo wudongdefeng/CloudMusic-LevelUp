@@ -161,8 +161,8 @@ class CloudMusic:
         )
         self.headers = {
             "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) "
-                          "Chrome/84.0.4147.89 "
-                          "Safari/537.36",
+            "Chrome/84.0.4147.89 "
+            "Safari/537.36",
             "Referer": "http://music.163.com/",
             "Accept-Encoding": "gzip, deflate",
         }
@@ -171,11 +171,11 @@ class CloudMusic:
         login_url = "https://music.163.com/weapi/login/cellphone"
         headers = {
             "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) "
-                          "Chrome/84.0.4147.89 Safari/537.36",
+            "Chrome/84.0.4147.89 Safari/537.36",
             "Referer": "http://music.163.com/",
             "Accept-Encoding": "gzip, deflate",
             "Cookie": "os=pc; osver=Microsoft-Windows-10-Professional-build-10586-64bit; appver=2.0.3.131777; "
-                      "channel=netease; __remember_me=true;",
+            "channel=netease; __remember_me=true;",
         }
         res = self.session.post(url=login_url, data=self.login_data, headers=headers)
         ret = json.loads(res.text)
