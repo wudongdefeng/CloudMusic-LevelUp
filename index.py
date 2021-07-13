@@ -13,7 +13,7 @@ infos = {
 
 
 def main_handler(event, context):
-    action.task_pool(infos)
+    action.tasks_pool(infos)
 
 
 if __name__ == "__main__":
