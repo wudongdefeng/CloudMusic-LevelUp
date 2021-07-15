@@ -77,20 +77,27 @@ class Push:
     def do(self):
         try:
             # ServerChan
-            if self.info["sc_key"]:
-                self.server_chan_push()
+            self.server_chan_push()
+        except Exception as err:
+            print(err)
+        try:
             # Bark
-            if self.info["bark_key"]:
-                self.bark_push()
+            self.bark_push()
+        except Exception as err:
+            print(err)
+        try:
             # Telegram
-            if self.info["tg_bot_key"]:
-                self.telegram_push()
+            self.telegram_push()
+        except Exception as err:
+            print(err)
+        try:
             # pushplus
-            if self.info["push_plus_key"]:
-                self.push_plus_push()
+            self.push_plus_push()
+        except Exception as err:
+            print(err)
+        try:
             # 企业微信
-            if self.info["wecom_key"]:
-                self.wecom_id_push()
+            self.wecom_id_push()
         except Exception as err:
             print(err)
 
